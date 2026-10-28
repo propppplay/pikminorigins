@@ -1,4 +1,4 @@
-# pikminorigin
+# Pikmin Origin
 
 ## Setup
 
@@ -6,4 +6,4 @@ For setup instructions, please see the [Fabric Documentation page](https://docs.
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+All Rights Reserved
