@@ -90,8 +90,11 @@ public class redpikmin<T extends RedpikminEntity> extends SinglePartEntityModel<
 		this.getPart().traverse().forEach(ModelPart::resetTransform);
 		this.setHeadAngles(netHeadYaw, headPitch);
 
-		this.animateMovement(ModAnimations.WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-		this.updateAnimation(entity.idleAnimationState, ModAnimations.IDLE, ageInTicks, 1f);
+		if (!entity.getNavigation().isFollowingPath()){
+			this.updateAnimation(entity.idleAnimationState, ModAnimations.IDLE, ageInTicks, 1f);
+		}
+			this.animateMovement(ModAnimations.WALK, limbSwing, limbSwingAmount, 5f, 5f);
+
 
 	}
 
@@ -105,11 +108,11 @@ public class redpikmin<T extends RedpikminEntity> extends SinglePartEntityModel<
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		torso.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+		root.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
 
 	@Override
 	public ModelPart getPart() {
-		return torso;
+		return root;
 	}
 }

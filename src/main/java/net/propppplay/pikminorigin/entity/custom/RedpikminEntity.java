@@ -44,11 +44,11 @@ public class RedpikminEntity extends AnimalEntity {
 
     }
 
-    @Override
-    protected void updateLimbs(float posDelta) {
-        float f = this.getPose() == EntityPose.STANDING ? Math.min(posDelta = 6.0f, 1.0f) : 0.0f;
-        super.updateLimbs(posDelta);
-    }
+    //@Override
+    //protected void updateLimbs(float posDelta) {
+    //    float f = this.getPose() == EntityPose.STANDING ? Math.min(posDelta = 6.0f, 1.0f) : 0.0f;
+    //    super.updateLimbs(posDelta);
+    //}
 
     @Override
     public void tick() {
@@ -56,6 +56,11 @@ public class RedpikminEntity extends AnimalEntity {
         if(this.getWorld().isClient()) {
             setupAnimationStates();
         }
+    }
+
+    @Override
+    public int getXpToDrop() {
+        return 0;
     }
 
     @Override
