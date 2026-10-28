@@ -1,0 +1,39 @@
+{
+  "pikmin_die": {
+    "subtitle": "sounds.pikminorigin.pikmin_die",
+    "sounds": [
+      "pikminorigin:pikmin_die"
+    ]
+  },
+  "pikmin_ouch": {
+    "subtitle": "sounds.pikminorigin.pikmin_ouch",
+    "sounds": [
+      "pikminorigin:pikmin_ouch"
+    ]
+  },
+  "pikmin_idle": {
+    "subtitle": "sounds.pikminorigin.pikmin_idle",
+    "sounds": [
+      "pikminorigin:pikmin_phew",
+      "pikminorigin:pikmin_hm"
+    ]
+  },
+  "pikmin_throw": {
+    "subtitle": "sounds.pikminorigin.pikmin_throw",
+    "sounds": [
+      "pikminorigin:pikmin_throw"
+    ]
+  },
+  "pikmin_rock_die": {
+    "subtitle": "sounds.pikminorigin.pikmin_rock_die",
+    "sounds": [
+      "pikminorigin:pikmin_rock_die"
+    ]
+  },
+  "pikmin_rock_throw": {
+    "subtitle": "sounds.pikminorigin.pikmin_rock_throw",
+    "sounds": [
+      "pikminorigin:pikmin_rock_throw"
+    ]
+  }
+}
