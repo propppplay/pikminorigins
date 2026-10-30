@@ -1,0 +1,10 @@
+{
+  "type": "origins:modify_exhaustion",
+  "name": "Hard Worker",
+  "description": "You get exhaused slightly faster than most others.",
+  "modifier": {
+    "name": "Increased exhaustion",
+    "operation": "multiply_base",
+    "value": 1.2
+  }
+}

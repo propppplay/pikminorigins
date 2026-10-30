@@ -94,6 +94,7 @@ public class redpikmin<T extends RedpikminEntity> extends SinglePartEntityModel<
 			this.updateAnimation(entity.idleAnimationState, ModAnimations.IDLE, ageInTicks, 1f);
 		}
 			this.animateMovement(ModAnimations.WALK, limbSwing, limbSwingAmount, 5f, 5f);
+		this.updateAnimation(entity.attackAnimationState, ModAnimations.ATTACK, ageInTicks, 1f);
 
 
 	}

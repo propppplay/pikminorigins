@@ -8,6 +8,9 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.data.DataTracker;
+import net.minecraft.entity.data.TrackedData;
+import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.entity.passive.AnimalEntity;
@@ -25,8 +28,14 @@ import org.jetbrains.annotations.Nullable;
 
 public class RedpikminEntity extends AnimalEntity {
 
+    private static final TrackedData<Boolean> ATTACKING =
+            DataTracker.registerData(RedpikminEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
+
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+
+    public final AnimationState attackAnimationState = new AnimationState();
+    public int attackAnimationTimeout = 0;
 
     public RedpikminEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -40,6 +49,29 @@ public class RedpikminEntity extends AnimalEntity {
             --this.idleAnimationTimeout;
         }
 
+        if(this.isAttacking() && attackAnimationTimeout <= 0) {
+            attackAnimationTimeout = 40;
+            attackAnimationState.start(this.age);
+        } else {
+            --this.attackAnimationTimeout;
+        }
+
+        if(!this.isAttacking()) {
+            attackAnimationState.stop();
+        }
+
+    }
+    public void setAttacking(boolean attacking) {
+        this.dataTracker.set(ATTACKING, attacking);
+    }
+
+    public boolean isAttacking() {
+        return this.dataTracker.get(ATTACKING);
+    }
+
+    @Override
+    protected void initDataTracker() {
+        this.dataTracker.set(ATTACKING, false);
     }
 
     //@Override

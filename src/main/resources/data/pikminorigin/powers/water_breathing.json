@@ -1,0 +1,9 @@
+{
+  "type": "origins:invulnerability",
+  "name": "Water Breathing",
+  "description": "Your in built space-suit grants you to ability to walk through water unharmed!",
+  "damage_condition": {
+    "type": "origins:name",
+    "name": "drown"
+  }
+}

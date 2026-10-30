@@ -1,0 +1,10 @@
+{
+  "type": "origins:modify_damage_dealt",
+  "name": "Weaker Attacks",
+  "description": "You deal 3 less damage on any attack.",
+  "modifier": {
+    "name": "Less damage",
+    "operation": "addition",
+    "value": -3.0
+  }
+}

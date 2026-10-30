@@ -1,0 +1,11 @@
+{
+  "type": "origins:attribute",
+  "name": "Lower Health",
+  "description": "Due to your strength, you can't take as many hits as others.",
+  "modifier": {
+    "name:": "Max health decrease",
+    "attribute": "minecraft:generic.max_health",
+    "value": -10.0,
+    "operation": "addition"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "powers": [
+    "pikminorigin:whistle",
+    "pikminorigin:throw",
+    "pikminorigin:hoco_biology",
+    "pikminorigin:armour",
+    "pikminorigin:water_breathing",
+    "pikminorigin:ignore_water",
+    "pikminorigin:exhausted",
+    "pikminorigin:weak_dmg"
+  ],
+  "icon": "minecraft:red_tulip",
+  "order": 4,
+  "impact": 3,
+  "name": "Hocotatian",
+  "description": "The Hocotatians are space-faring treasure hunters from the planet Hocotate. This Hocotatian in particular, is experienced in communicating and controlling armies of Pikmin!"
+}
