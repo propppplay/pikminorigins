@@ -71,7 +71,8 @@ public class RedpikminEntity extends AnimalEntity {
 
     @Override
     protected void initDataTracker() {
-        this.dataTracker.set(ATTACKING, false);
+        super.initDataTracker();
+        this.dataTracker.startTracking(ATTACKING, false);
     }
 
     //@Override
