@@ -7,7 +7,9 @@
     "pikminorigin:water_breathing",
     "pikminorigin:ignore_water",
     "pikminorigin:exhausted",
-    "pikminorigin:weak_dmg"
+    "pikminorigin:weak_dmg",
+    "pikminorigin:height",
+    "pikminorigin:width"
   ],
   "icon": "minecraft:red_tulip",
   "order": 4,
